@@ -86,11 +86,11 @@ _The examples in this tutorial aim to improve familiarity with these modelling t
 
 The overall workflow is as follows:
 
-1. **Perform Craig-Bampton reduction in MATLAB**  
-2. **Extract reduced-order stiffness, mass, and damping matrices**  
-3. **Transfer the reduced-order data to the “Reduced-Order Flexible Solid” block in Simulink**, which uses the floating frame of reference formulation  
-4. **Run dynamic simulations in Simulink**  
-5. **Reconstruct full-order solutions** from the reduced simulation results  
+A. **Perform Craig-Bampton reduction in MATLAB**  
+B. **Extract reduced-order stiffness, mass, and damping matrices**  
+C. **Transfer the reduced-order data to the “Reduced-Order Flexible Solid” block in Simulink**, which uses the floating frame of reference formulation  
+D. **Run dynamic simulations in Simulink**  
+E. **Reconstruct full-order solutions** from the reduced simulation results  
 
 ---
 
@@ -104,7 +104,7 @@ Figure below shows the geometry of the column
 
 ---
 
-## Steps for Craig-Bampton Reduction in MATLAB
+## Step A: Craig-Bampton Reduction in MATLAB
 
 ### Step 1 — Define structure parameters and common properties  
 (I will insert matlab code here, do not change this line GPT)
