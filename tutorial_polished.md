@@ -45,31 +45,28 @@ The provided codes add two important capabilities to MATLAB’s original impleme
 1. **Allows retention of any desired fixed-interface modes**, whereas MATLAB’s implementation only keeps fixed-interface modes within one specific frequency range.  
 2. **Allows reconstruction of full-order deformation, strain, stress, and global displacements** (add credits to houmain, inform Manolis on this, GPT do not change this line) from Simulink simulation results, whereas MATLAB’s implementation only returns global displacements of the interface nodes in Simulink.
 
-The first example in this tutorial covers these functionalities.
+_The first example in this tutorial covers these functionalities._
 
 ---
 
 ### 2. The Simscape Example does not address rocking problems
-The Simscape Example is not a rocking problem and therefore does **not** provide guidance on how to use:
+The Simscape Example is not a rocking problem and therefore does **not** provide guidance on how to use the **OxContact elements** (an in-house toolbox for contact modelling in rocking problems)  
 
-- **OxContact elements** (an in-house toolbox for contact modelling in rocking problems)  
-- **Reduced order flexible solids in combination with contact modelling**
-
-Both examples in this tutorial address these aspects.
+_Both examples address this._
 
 ---
 
 ### 3. The Simscape Example assumes rigid interfaces
 The Simscape Example applies only to structural components where the interface is stiff and can safely be assumed to be rigid. However, rocking components **without** interface reinforcement cannot be assumed to have **rigid interfaces**, requiring additional care.
 
-The first example exclusively covers this scenario.
+_The first example exclusively covers this scenario._
 
 ---
 
 ### 4. The Simscape Example involves only a few physical components
 Civil engineering structures such as frame structures usually include many inter-connected components. Constructing such a system in Simulink — which uses the floating frame of reference formulation — requires more effort than traditional civil engineering software.
 
-The second example in this tutorial provides a reference case.
+_The second example in this tutorial provides a reference case._
 
 ---
 
@@ -81,7 +78,7 @@ Despite their advantages for addressing rocking problems, the:
 
 remain relatively unfamiliar to many civil engineerin engineers and researchers.
 
-The examples in this tutorial aim to improve familiarity with these modelling techniques.
+_The examples in this tutorial aim to improve familiarity with these modelling techniques._
 
 ---
 
