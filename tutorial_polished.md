@@ -92,13 +92,12 @@ The overall workflow is as follows:
 4. **Run dynamic simulations in Simulink**  
 5. **Reconstruct full-order solutions** from the reduced simulation results  
 
-The first example covers the detailed workflow, and the steps that are *not* covered by the MATLAB example are <ins>underlined</ins> in this document.
-
 ---
 
 ## Example 1: Rocking Column with Corner Feet
 
 The first example models a **solid marble column** with four rigid corner feet standing on a high-grip, stiff support medium. The height of the corner feet is negligible.
+This example also covers the detailed workflow, and the steps that are *not* covered by the Simscape Example are <ins>underlined</ins> in this document.
 
 Figure below shows the geometry of the column  
 *(insert the figure, GPT do not change this line)*
