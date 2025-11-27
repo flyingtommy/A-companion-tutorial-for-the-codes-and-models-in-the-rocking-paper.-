@@ -11,8 +11,64 @@ Figure below shows the geometry of the column
 ## Step 1: Craig-Bampton Reduction in MATLAB
 
 ### I — Define structure parameters and common properties  
-(I will insert matlab code here)
+```matlab
+% Mass in kg.
+% Length in m. 
+% Time in s. 
 
+clear all
+clc
+
+NumInterFace = 4;                                           % Number of contact feet
+StiModi = 1;
+
+g = 9.80665;
+Width = 1;                                                  % Cross section width in m.
+Depth = 1*1.05;                                             % Cross section depth in m.
+E = 5.42538e09;                                             % Material Young's modulus in Pa.
+rho = 2256.86;                                              % Material density in kg/m^3.
+nu = 0.3;                                                   % Poisson's ratio
+L = 10;                                                     % Column length in m.
+A = Width*Depth;
+ms = rho*L*A;
+L_te =L;
+
+% Global properties
+
+distanceToEdge = 0.2;
+I = ms*(Width^2+L^2)/12;
+hcg = L/2;
+rcg = sqrt((hcg^2) + (Width/2*(1-distanceToEdge))^2);
+p = sqrt(ms*g*rcg/I);
+maS = ms;                                                   % Total mass of the system.
+alphacg = atan((Width/2*(1-distanceToEdge))/hcg);
+
+% Stiffness and damping for one horizontal frictional element.
+
+muf = 0.8;                                                  % Friction coefficient
+fh = 60;                                                    % Horizontal frequency (see the paper), used to define the frictional spring stiffness.
+wN=2*pi*fh;
+ksin=0.5;                                                   % Frictional element damping ratio.
+
+k_n=(maS)*wN^2/NumInterFace/StiModi;                        % Stiffnes for one frictional spring.
+c_n=ksin*2*sqrt(k_n*NumInterFace*(maS))/NumInterFace;       % Damping coefficient for one frictional damper.
+
+% Stiffness and damping for one vertical support element.
+
+fv = 60;                                                    % Vertical frequency (see the paper), used to define the vertical spring stiffness.
+wn = 2*pi*fv;
+dR = 0.5;                                                   % Vertical spring damping ratio.
+Ksupport_total = (wn^2)*(maS)/StiModi;
+Csupport_total = dR*2*sqrt(Ksupport_total*(maS));
+kk2=Ksupport_total/NumInterFace;                            % Stiffnes for one vertical spring.
+cc1=Csupport_total/NumInterFace;                            % Damping coefficient for one vertical damper.
+
+%Initial conditions
+
+hc = 0;
+zc = 1*(hc/2 - (maS)*g/(Ksupport_total));                   % Initial deformation of one vertical spring.
+
+```
 ---
 
 ### II — Generate or import the geometry  
