@@ -288,7 +288,7 @@ Freq = modalresults.NaturalFrequencies;
 
 ```
 
-*(⚠️insert the modeshape figure here)*
+![Live task to visualize mode shapes](images/ModeShapeVisulization.JPG)
 
 ---
 
