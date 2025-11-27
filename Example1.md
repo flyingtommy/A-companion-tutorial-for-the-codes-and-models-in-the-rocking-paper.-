@@ -3,13 +3,13 @@
 The first example models a **solid marble column** with four rigid corner feet standing on a high-grip, stiff support medium. The height of the corner feet is negligible.
 This example also covers the detailed workflow, and the contents that are *not* covered by the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)** start with ⭐ in this document. 
 
-Figure 1 shows the column geometry. The column and the support media properties can be found in the companion paper.
+**Figure 1** shows the column geometry. The column and the support media properties can be found in the companion paper.
 
 <p align="center">
 <img src="images/Example1.JPG" width="500">
 </p>
 
-*Figure 1: (a) Column geometry,(b) rigid corner feet position.*
+*Figure 1: (a) Column geometry, (b) rigid corner feet position.*
 
 
 ---
@@ -285,7 +285,7 @@ structuralBC(model2, ...
 ### VII — Check the fixed-interface modes  
 Take note of the frequencies corresponding to the modes you intend to retain. To determine which modes to keep, perform a convergence analysis using different numbers of modes until the results no longer change with the inclusion of additional modes.
 
-⭐Optionally, run the modal analysis within a **live script** and use the **[visualize PDE results task](https://uk.mathworks.com/help/pde/ug/visualizepderesults.html)** to visualize the mode shapes.
+⭐Optionally, run the modal analysis within a **live script** and use the **[visualize PDE results task](https://uk.mathworks.com/help/pde/ug/visualizepderesults.html)** to visualize the mode shapes. **Figure 3** shows the first fixed-interface mode in the PDE visualizer. 
 
 ```matlab
 %% Modal analysis
@@ -295,7 +295,7 @@ Freq = modalresults.NaturalFrequencies;
 ```
 ![Live task to visualize mode shapes](images/ModeShapeVisulization.JPG)
 
-*Figure 2: Live task to visualize mode shapes.*
+*Figure 3: Live task to visualize mode shapes.*
 
 ---
 
