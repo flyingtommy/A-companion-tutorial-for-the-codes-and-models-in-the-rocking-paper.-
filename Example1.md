@@ -54,8 +54,8 @@ These DOFs are retained during Craig-Bampton reduction.
 
 ---
 
-### G — Check fixed-interface modes  
-Take note of the frequencies corresponding to modes you want to keep.
+### G — Check the fixed-interface modes  
+Take note of the frequencies corresponding to the modes you want to keep. To know what modes to keep, you need to run a convergence analysis with different modes until the results does not change with more modes. 
 
 <ins>Optionally, run the modal analysis within a **live script** and use the</ins> **[visualize PDE results task](https://uk.mathworks.com/help/pde/ug/visualizepderesults.html)** <ins> to visualize the mode shapes.</ins>
 
