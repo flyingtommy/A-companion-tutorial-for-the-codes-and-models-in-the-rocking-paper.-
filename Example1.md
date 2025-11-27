@@ -1,7 +1,7 @@
 ## Example 1: Rocking Column with Corner Feet
 
 The first example models a **solid marble column** with four rigid corner feet standing on a high-grip, stiff support medium. The height of the corner feet is negligible.
-This example also covers the detailed workflow, and the steps that are *not* covered by the Simscape Example start with ⭐ in this document.
+This example also covers the detailed workflow, and the contents that are *not* covered by the Simscape Example start with ⭐ in this document.
 
 Figure below shows the geometry of the column  
 *(insert the figure, GPT do not change this line)*
@@ -57,7 +57,7 @@ These DOFs are retained during Craig-Bampton reduction.
 ### VII — Check the fixed-interface modes  
 Take note of the frequencies corresponding to the modes you want to keep. To know what modes to keep, you need to run a convergence analysis with different modes until the results does not change with more modes. 
 
-<ins>Optionally, run the modal analysis within a **live script** and use the</ins> **[visualize PDE results task](https://uk.mathworks.com/help/pde/ug/visualizepderesults.html)** <ins> to visualize the mode shapes.</ins>
+⭐Optionally, run the modal analysis within a **live script** and use the **[visualize PDE results task](https://uk.mathworks.com/help/pde/ug/visualizepderesults.html)** to visualize the mode shapes.
 
 (I will insert matlab code here, do not change this line GPT)
 
@@ -66,7 +66,7 @@ Take note of the frequencies corresponding to the modes you want to keep. To kno
 ---
 
 ### VIII — Apply Craig-Bampton reduction  
-<ins>List the frequency ranges corresponding to the modes you want to retain.</ins>
+⭐List the frequency ranges corresponding to the modes you want to retain.
 
 (I will insert matlab code here, do not change this line GPT)
 
