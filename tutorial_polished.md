@@ -1,4 +1,4 @@
-# Tutorial: Reduced-Order Flexible Solid Modelling for Rocking Problems in Simulink
+# Tutorial: Reduced Order Flexible Solid Modelling for Rocking Problems in Simulink
 
 ## Overview
 This tutorial provides the MATLAB codes, the Simulink models, and the necessary introductions required to run the examples presented in the companion paper. Two examples from the companion paper are covered:
@@ -90,7 +90,7 @@ The overall workflow is as follows:
 
 1. **Perform Craig-Bampton reduction in MATLAB**  
 2. **Extract reduced-order stiffness, mass, and damping matrices**  
-3. **Transfer the reduced-order data to the “Reduced-Order Flexible Solid” block in Simulink**, which uses the floating frame of reference formulation  
+3. **Transfer the reduced-order data to the “Reduced Order Flexible Solid” block in Simulink**, which uses the floating frame of reference formulation  
 4. **Run dynamic simulations in Simulink**  
 5. **Reconstruct full-order solutions** from the reduced simulation results  
 
