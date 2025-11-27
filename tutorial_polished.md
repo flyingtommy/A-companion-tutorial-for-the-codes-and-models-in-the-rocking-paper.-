@@ -42,7 +42,7 @@ Readers must have a good understanding of:
 Although MATLAB provides the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)** for using the reduced order flexible solid, this separate documentation is necessary for the following reasons.
 
 ### 1. Additional functionalities not included in the Simscape Example
-The provided codes add two important capabilities to MATLAB’s original implementation:
+The provided codes add two important capabilities to MATLAB’s original implementation (2025a verision):
 
 1. **Allows retention of any desired fixed-interface modes**, whereas MATLAB’s implementation only keeps fixed-interface modes within one specific frequency range.  
 2. **Allows reconstruction of full-order deformation, strain, stress, and global displacements from Simulink simulation results** (⚠️add credits to houmain, inform Manolis on this) , whereas MATLAB’s implementation only returns global displacements of the interface nodes in Simulink.
