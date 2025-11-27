@@ -245,6 +245,7 @@ structuralProperties(model2,"YoungsModulus",E, ...
     "PoissonsRatio",nu, ...
     "MassDensity",rho);
 ```
+**Figure 2** shows the final meshed column.
 
 ---
 
