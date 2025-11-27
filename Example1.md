@@ -22,13 +22,13 @@ clc
 NumInterFace = 4;                                           % Number of contact feet
 StiModi = 1;
 
-g = 9.80665;
-Width = 1;                                                  % Cross section width in m.
-Depth = 1*1.05;                                             % Cross section depth in m.
+g = 9.80665;                                                % Gravitational acceleration
+Width = 1;                                                  % Cross section width.
+Depth = 1*1.05;                                             % Cross section depth.
 E = 5.42538e09;                                             % Material Young's modulus in Pa.
-rho = 2256.86;                                              % Material density in kg/m^3.
-nu = 0.3;                                                   % Poisson's ratio
-L = 10;                                                     % Column length in m.
+rho = 2256.86;                                              % Material density.
+nu = 0.3;                                                   % Poisson's ratio.
+L = 10;                                                     % Column length.
 A = Width*Depth;
 ms = rho*L*A;
 L_te =L;
@@ -67,7 +67,6 @@ cc1=Csupport_total/NumInterFace;                            % Damping coefficien
 
 hc = 0;
 zc = 1*(hc/2 - (maS)*g/(Ksupport_total));                   % Initial deformation of one vertical spring.
-
 ```
 ---
 
