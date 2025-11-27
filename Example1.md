@@ -73,7 +73,50 @@ zc = 1*(hc/2 - (maS)*g/(Ksupport_total));                   % Initial deformatio
 ### II — Generate or import the geometry  
 Details can be found in the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)**.
 
-(I will insert matlab code here, do not change this line GPT)
+```matlab
+%% Generate geometry
+
+gm = multicuboid(Width,Depth,L_te);                                                 % Generate initial geometry without additional vertices.
+LF_coords = [-Width/2+distanceToEdge*Width/2;-Depth/2+distanceToEdge*Depth/2;0];    % Position of the center of the contact feet, will be added to the initial geometry as vertices.
+RF_coords = [Width/2-distanceToEdge*Width/2;-Depth/2+distanceToEdge*Depth/2;0];
+LB_coords = [-Width/2+distanceToEdge*Width/2;Depth/2-distanceToEdge*Depth/2;0];
+RB_coords = [Width/2-distanceToEdge*Width/2;Depth/2-distanceToEdge*Depth/2;0];
+
+
+RF_dis = RF_coords - LF_coords;
+LB_dis = LB_coords - LF_coords;
+RB_dis = RB_coords - LF_coords;
+
+
+
+origins = [LF_coords';RF_coords';LB_coords';RB_coords'];                            % Positions of interface dofs, will be used in CB reduction.
+numFrames = size(origins,1);
+addVertex(gm,"Coordinates",origins);
+
+
+PoI = [-Width/2 0 0.1*L_te; -Width/2 0 0.2*L_te; -Width/2 0 0.3*L_te;
+    -Width/2 0 0.4*L_te; -Width/2 0 0.5*L_te;
+    -Width/2 0 0.6*L_te; -Width/2 0 0.7*L_te;
+    -Width/2 0 0.8*L_te; -Width/2 0 0.9*L_te;
+    -Width/2 0 L_te; Width/2 0 0.1*L_te; Width/2 0 0.2*L_te;
+    Width/2 0 0.3*L_te; Width/2 0 0.4*L_te;Width/2 0 0.5*L_te;Width/2 0 0.6*L_te
+    Width/2 0 0.7*L_te; Width/2 0 0.8*L_te;Width/2 0 0.9*L_te;Width/2 0 L_te];      % Positions for stress investigation, will be added to the initial geometry as vertices.
+
+for i = 1:1:size(PoI,1)                                                             % Add vertices to the initial geometry.
+    addVertex(gm,"Coordinates",PoI(i,:));
+end
+
+model = createpde('structural','modal-solid');
+model.Geometry = gm;
+
+pdegplot(model,'VertexLabels','on','FaceAlpha',0.5);                                % Plot to check positions of the added vertice.
+
+%Specify structural properties
+
+structuralProperties(model,"YoungsModulus",E, ...
+    "PoissonsRatio",nu, ...
+    "MassDensity",rho);
+```
 
 ---
 
