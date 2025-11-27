@@ -121,7 +121,7 @@ structuralProperties(model,"YoungsModulus",E, ...
 ---
 
 ### III — Mesh the component  
-This step determines the position of the interface nodes.
+Because the node of a tetrahedral element
 
 Workflow:
 - Mesh once to identify the nearby vertex locations  
