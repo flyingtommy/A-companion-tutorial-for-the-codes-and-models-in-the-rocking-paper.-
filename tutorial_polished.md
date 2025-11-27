@@ -66,7 +66,7 @@ _The first example exclusively covers this scenario._
 ---
 
 ### 4. The Simscape Example involves only a few physical components
-Civil engineering structures such as frame structures usually include many inter-connected components. Constructing such a system in Simulink — which uses the floating frame of reference formulation — requires more effort than traditional civil engineering software.
+Civil engineering structures such as frame structures usually include many inter-connected components. Building such a system in Simulink — which uses the floating frame of reference formulation — requires more effort than traditional civil engineering software.
 
 _The second example in this tutorial provides a reference case._
 
@@ -78,7 +78,7 @@ Despite their advantages for addressing rocking problems, the:
 - **Floating frame of reference formulation**, and  
 - **Craig-Bampton reduction method**
 
-remain relatively unfamiliar to many civil engineerin engineers and researchers.
+remain relatively unfamiliar to many civil engineering engineers and researchers.
 
 _The examples in this tutorial aim to improve familiarity with these modelling techniques._
 
