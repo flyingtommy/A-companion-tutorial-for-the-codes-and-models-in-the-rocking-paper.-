@@ -4,7 +4,7 @@ The first example models a **solid marble column** with four rigid corner feet s
 This example also covers the detailed workflow, and the contents that are *not* covered by the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)** start with ⭐ in this document.
 
 Figure below shows the geometry of the column  
-*(insert the figure, GPT do not change this line)*
+*(⚠️insert the figure, GPT do not change this line)*
 
 ---
 
