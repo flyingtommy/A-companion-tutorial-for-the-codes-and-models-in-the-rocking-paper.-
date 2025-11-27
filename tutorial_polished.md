@@ -1,6 +1,6 @@
 # Tutorial: Reduced Order Flexible Solid Modelling for Rocking Problems in Simulink
 
-## Overview
+## 🌟Overview
 This tutorial provides the MATLAB codes, the Simulink models, and the necessary introductions required to run the examples presented in the companion paper. Two examples from the companion paper are covered:
 
 1. A realistic column-like structure  
@@ -11,7 +11,7 @@ The second example shows how to build a structural system with many inter-connec
 
 ---
 
-## Pre-requisites
+## 🌟Pre-requisites
 
 Readers must have a good understanding of:
 
@@ -38,7 +38,7 @@ Readers must have a good understanding of:
 
 
 
-## Why This Separate Documentation?
+## 🌟Why This Separate Documentation?
 Although MATLAB provides the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)** for using the reduced order flexible solid, this separate documentation is necessary for the following reasons.
 
 ### 1. Additional functionalities not included in the Simscape Example
@@ -84,7 +84,7 @@ _The examples in this tutorial aim to improve familiarity with these modelling t
 
 ---
 
-## General Workflow
+## 🌟General Workflow
 
 The overall workflow is as follows:
 
@@ -96,5 +96,5 @@ The overall workflow is as follows:
 
 ---
 
-## Example 1: Rocking Column with Corner Feet
+## 🌟Example 1: Rocking Column with Corner Feet
 [Link text](./Example1.md)
