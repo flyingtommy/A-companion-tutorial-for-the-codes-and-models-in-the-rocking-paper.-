@@ -1,7 +1,7 @@
 ## Example 1: Rocking Column with Corner Feet
 
 The first example models a **solid marble column** with four rigid corner feet standing on a high-grip, stiff support medium. The height of the corner feet is negligible.
-This example also covers the detailed workflow, and the steps that are *not* covered by the Simscape Example are <ins>underlined</ins> in this document.
+This example also covers the detailed workflow, and the steps that are *not* covered by the Simscape Example start with ⭐ in this document.
 
 Figure below shows the geometry of the column  
 *(insert the figure, GPT do not change this line)*
