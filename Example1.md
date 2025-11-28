@@ -9,7 +9,7 @@ This example also covers the detailed workflow, and the contents that are *not* 
 <img src="images/Example1.JPG" width="500">
 </p>
 
-*Figure 1: (a) Schematic drawing, (b) rigid corner feet position.*
+*Figure 1: (a) Schematic drawing and (b) rigid corner feet position.*
 
 
 ---
@@ -257,7 +257,7 @@ structuralProperties(model2,"YoungsModulus",E, ...
 
 ![meshed column](images/Structure3.jpg)
 
-*Figure 2: (a) Finite element representation of the column and (b) Rigid corner feet on bottom surface shown in deep blue*
+*Figure 2: (a) Finite element representation of the column and (b) rigid corner feet on bottom surface shown in deep blue*
 
 ---
 
