@@ -22,7 +22,7 @@ This modified Craig-Bampton implementation allows you to retain any desired fixe
 ---
 
 
-## 🚩 Step 1: Craig-Bampton Reduction in MATLAB
+## 🚩 Step 1: Perform Craig-Bampton Reduction in MATLAB
 
 ### 1️⃣ Define structure parameters and common properties  
 ```matlab
@@ -360,8 +360,8 @@ The following code allows assignment of different modal damping ratios to differ
 %% Manually calculate the reduced-order damping matrix
 
 MoI_Length = ones(1,8);                         % Modes of interest.
-MoI_Dr = 0.8;                                   % Modal damping ratio for the modes of interest.
-OtherModeDr = 0.8;                              % Modal damping ratio for all other modes.
+MoI_Dr = 0.05;                                   % Modal damping ratio for the modes of interest.
+OtherModeDr = 0.05;                              % Modal damping ratio for all other modes.
 MaterialDRMatrix = [0 0 0 0 0 0 MoI_Dr*MoI_Length OtherModeDr*ones(1,length(Reduced.K)-6-length(MoI_Length))];
 MaterialDRMatrix = diag(MaterialDRMatrix);
 
@@ -390,3 +390,4 @@ Reduced.C = Reduced.C(dofPerm,:);
 Reduced.C = Reduced.C(:,dofPerm);             % Reduced damping matrix.
 ```
 ---
+## 🚩 Step 2: Run Simulation in Simulink
