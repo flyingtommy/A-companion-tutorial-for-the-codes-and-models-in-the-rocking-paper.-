@@ -14,7 +14,7 @@ This example also covers the detailed workflow, and the contents that are *not* 
 
 ---
 
-## Before all
+## 🚩 Before all
 Replace the original craigBamptonImpl.m with the [modified version](./craigBamptonImpl.m). You should find the file at path like D:\MATLAB\R2023a\toolbox\pde\+pde\@StructuralModel. If you want to keep the original craigBamptonImpl.m, rename it to something else then put the [modified version](./craigBamptonImpl.m) to the location. 
 
 This modified Craig-Bampton implementation allows you to retain any desired fixed-interface modes, whereas the original implementation only allows to retain modes within one specific frequency range.
@@ -22,9 +22,9 @@ This modified Craig-Bampton implementation allows you to retain any desired fixe
 ---
 
 
-## Step 1: Craig-Bampton Reduction in MATLAB
+## 🚩 Step 1: Craig-Bampton Reduction in MATLAB
 
-### I — Define structure parameters and common properties  
+### 1️⃣ Define structure parameters and common properties  
 ```matlab
 % Mass in kg.
 % Length in m. 
@@ -84,7 +84,7 @@ zc = 1*(hc/2 - (maS)*g/(Ksupport_total));                   % Initial deformatio
 ```
 ---
 
-### II — Generate or import the geometry  
+### 2️⃣ Generate or import the geometry  
 More details about how to generate and import complex geometry can be found in the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)**.
 
 ```matlab
@@ -141,7 +141,7 @@ To improve the poor mesh quality, the following strategy is used:
 - Add these nodes as vertices to the original geometry to represent the foot.  
 - Re-mesh the updated geometry.
 - Apply vertex-type multipoint constraints.  
-### ⭐III — Mesh the geometry without the vertices of the feet  
+### ⭐3️⃣ Mesh the geometry without the vertices of the feet  
 
 ```matlab
 % Create finite-element mesh
@@ -152,7 +152,7 @@ msh=generateMesh(model,"Hface",{1,0.06,2,0.2},Hmax=hmax,GeometricOrder="linear",
 
 ---
 
-### ⭐IV — Locate the nodes closest to the foot vertices  
+### ⭐4️⃣ Locate the nodes closest to the foot vertices  
 ```matlab
 % Locate the nodes closest to the foot vertices.
 
@@ -234,7 +234,7 @@ RB_surroundingNodes_coords = nodes(:,RB_surroundingNodes_Index);
 ```
 ---
 
-### ⭐V — Add these nodes as vertices to the original geometry and re-mesh
+### ⭐5️⃣ Add these nodes as vertices to the original geometry and re-mesh
 ```matlab
 %% Actual model we use for analysis
 
@@ -261,7 +261,7 @@ structuralProperties(model2,"YoungsModulus",E, ...
 
 ---
 
-### ⭐VI — Apply vertex-type multipoint constraints  
+### ⭐6️⃣ Apply vertex-type multipoint constraints  
 The six degrees of freedom of each rigid plane will be retained during Craig-Bampton reduction.
 
 ```matlab
@@ -295,7 +295,7 @@ structuralBC(model2, ...
 ```
 ---
 
-### VII — Check the fixed-interface modes  
+### 7️⃣ Check the fixed-interface modes  
 Take note of the frequencies corresponding to the modes you intend to retain. To determine which modes to keep, perform a convergence analysis using different numbers of modes until the results no longer change with the inclusion of additional modes.
 
 ⭐Optionally, run the modal analysis within a **live script** and use the **[visualize PDE results task](https://uk.mathworks.com/help/pde/ug/visualizepderesults.html)** to visualize the mode shapes. **Figure 3** shows the first fixed-interface mode in the PDE visualizer. 
@@ -312,7 +312,7 @@ Freq = modalresults.NaturalFrequencies;
 
 ---
 
-### VIII — Apply Craig-Bampton reduction  
+### 8️⃣ Apply Craig-Bampton reduction  
 ⭐List the frequency ranges corresponding to the modes you want to retain, as shown in the following code.
 
 ```matlab
@@ -353,7 +353,7 @@ Reduced.M = Reduced.M(:,dofPerm);
 
 ---
 
-### IX — Manually calculate the reduced-order damping matrix  
+### 9️⃣ Manually calculate the reduced-order damping matrix  
 The following code allows assignment of different modal damping ratios to different modes. Or, Simulink’s reduced order flexible solid block can automatically compute uniform modal damping  matrix and Rayleigh damping matrix for you.  
 
 ```matlab
