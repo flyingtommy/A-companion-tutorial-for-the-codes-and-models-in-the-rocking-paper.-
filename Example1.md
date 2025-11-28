@@ -253,9 +253,9 @@ structuralProperties(model2,"YoungsModulus",E, ...
 ```
 **Figure 2** shows the final meshed column.
 
-![meshed column](images/Structure3.JPG)
+![meshed column](images/Structure3.jpg)
 
-*Figure 2: Live task to visualize mode shapes.*
+*Figure 2: (a) Finiteelement representation of the column and (b) Rigid corner feet on bottom surface shown in deep blue*
 
 ---
 
