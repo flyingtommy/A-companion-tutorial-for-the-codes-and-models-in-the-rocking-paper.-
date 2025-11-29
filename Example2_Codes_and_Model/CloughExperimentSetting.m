@@ -2,16 +2,7 @@ clear all
 clc
 
 
-load('Clough-Initial-0.95miu.mat');
-xinitial = xout;
-mowei = length(xout{1}.Values.Time);
-del = 1:mowei-1;
-for i = 1:1:numElements(xout)
-xinitial{i}.Values = delsample(xinitial{i}.Values,"Index",del);
-end
-
-clear xout SimulationMetadata logsout
-
+load('Clough-Initial.mat');
 
 % Global property
 g= 9.80665;
@@ -117,10 +108,9 @@ absTol = 1e-4;
 t_end = 8.93;%Cc+2*pi/omegag;
 cr = 1;
 
-% set_param('CloughExperiment','LoadInitialState','on','InitialState','xinitial')
-% tic;
-% sim('CloughExperiment.slx'); %Run the simulink model.
-% toc;
-% 
+set_param('CloughExperiment','LoadInitialState','on','InitialState','xinitial')
+tic;
+sim('CloughExperiment.slx'); %Run the simulink model.
+toc;
 
 
