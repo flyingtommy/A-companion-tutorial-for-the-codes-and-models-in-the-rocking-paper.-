@@ -439,10 +439,10 @@ set_param('Example_1_Simu','LoadInitialState','off')    % No initial states prov
 tic;                                                    % Start timing the simulation.
 sim('Example_1_Simu.slx');                              % Run the simulink model.
 toc;                                                    % Stop timing the simulation.
-load('ColumnResults.mat');
+
 
 % Save the simulation results
-                             
+load('ColumnResults.mat');                             
 filename = ['Column-Results-26Modes-' num2str(freqRatio) '-' num2str(AmpRatio) '.mat'];
 save(filename,'SimulationMetadata','logsout','xout');   % Save simulation results.
 ```
