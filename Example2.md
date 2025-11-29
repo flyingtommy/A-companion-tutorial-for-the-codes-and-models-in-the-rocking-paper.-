@@ -1,16 +1,9 @@
 ## Example 2: Rocking Frame Experiment 
 
-The second example models the experiment steel frame tested on a shake table by **[Clough and Huckelbridge](https://nehrpsearch.nist.gov/static/files/NSF/PB278769.pdf)** , which was allowed to uplift. Craig-Bampton reduction was not applied to remove its effect on the response.    
- 
-
-
-The first example models a **solid marble column** with four rigid corner feet standing on a high-grip, stiff support medium. The height of the corner feet is negligible.
-This example also covers the detailed workflow, and the contents that are *not* covered by the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)** start with ⭐ in this document. 
-
-**Figure 1** shows the column geometry. The column and the support media properties can be found in the companion paper.
+The second example models the experiment steel frame tested on a shake table by **[Clough and Huckelbridge](https://nehrpsearch.nist.gov/static/files/NSF/PB278769.pdf)** , which was allowed to uplift. **Figure 1** shows the tested frame. Craig-Bampton reduction was not applied to remove its effect on the response. 
 
 <p align="center">
-<img src="images/Example2.jpg" width="500">
+<img src="images/Example2.jpg" width="750">
 </p>
 
 *Figure 1: The tested frame.*
