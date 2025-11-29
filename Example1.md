@@ -405,7 +405,7 @@ save(filename,'PoI','R','Reduced','model2');
 ## 🚩 Step 2: Run Simulation in Simulink
 
 - After **Step 1**, **do not** clear anything in the MATLAB workspace.
-- Open the [Example_1_Simu.slx model](./Example_1_Simu.slx) in Simulink. Check the parameters in each block, and you should find they are defined already in the MATLAB workspace. For example, **Figure 4** shows the block of the reduced order flexible solid for modelling the column, and you should find the required fields of Origins, Stiffness Matrix, Mass Matrix, and Damping Matrix are defined in variables Reduced.P, Reduced.K, Reduced.M, and Reduced.C respectively.
+- Open the [Example_1_Simu.slx model](Example1_Codes_and_Model/Example_1_Simu.slx) in Simulink. Check the parameters in each block, and you should find they are defined already in the MATLAB workspace. For example, **Figure 4** shows the block of the reduced order flexible solid for modelling the column, and you should find the required fields of Origins, Stiffness Matrix, Mass Matrix, and Damping Matrix are defined in variables Reduced.P, Reduced.K, Reduced.M, and Reduced.C respectively.
 
 <p align="center">
 <img src="images/ReducedBlock.JPG" width="500">
@@ -454,7 +454,7 @@ save(filename,'SimulationMetadata','logsout','xout');   % Save simulation result
 
 After running the simulation, the datasets **`logsout`** and **`xout`** contain the information required for reconstruction. The **`logsout`** dataset stores the global solution of the rigid-body reference DoFs, which is necessary for computing full order global displacements. The **`xout`** dataset stores the solution of all system states, including those of the reduced order flexible solid, which are required for calculating full order deformation, strain, and stress. To inspect the contents of each dataset, open them in MATLAB and check the `BlockPath` entries.
 
-However, **`xout` does not include the local state solution of the DoFs defining the rigid-body reference**, and this information must be added during reconstruction. The following [Example1_Reconstruction code](./Example1_Reconstruction.m) handles this and reconstructs the full-order stress solution.
+However, **`xout` does not include the local state solution of the DoFs defining the rigid-body reference**, and this information must be added during reconstruction. The following [Example1_Reconstruction code](Example1_Codes_and_Model/Example1_Reconstruction.m) handles this and reconstructs the full-order stress solution.
 
 
 
