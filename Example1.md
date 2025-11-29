@@ -22,7 +22,8 @@ This modified Craig-Bampton implementation allows you to retain any desired fixe
 ---
 
 
-## 🚩 Step 1: Perform Craig-Bampton Reduction in MATLAB ([view the full code](./Example1_CBReduction.m))
+## 🚩 Step 1: Perform Craig-Bampton Reduction in MATLAB 
+The following steps go through the [Example1_CBReduction code](./Example1_CBReduction.m) in details.
 
 ### 1️⃣ Define structure parameters and common properties  
 ```matlab
@@ -449,7 +450,7 @@ save(filename,'SimulationMetadata','logsout','xout');   % Save simulation result
 
 ---
 
-## 🚩⭐ Step 3: Reconstruct the Full Order Solutions ([view the full code](./Example1_Reconstruction.m))
+## 🚩⭐ Step 3: Reconstruct the Full Order Solutions ([download the code here](./Example1_Reconstruction.m))
 
 After running the simulation, the datasets **`logsout`** and **`xout`** contain the information required for reconstruction. The **`logsout`** dataset stores the global solution of the rigid-body reference DoFs, which is necessary for computing full order global displacements. The **`xout`** dataset stores the solution of all system states, including those of the reduced order flexible solid, which are required for calculating full order deformation, strain, and stress. To inspect the contents of each dataset, open them in MATLAB and check the `BlockPath` entries.
 
