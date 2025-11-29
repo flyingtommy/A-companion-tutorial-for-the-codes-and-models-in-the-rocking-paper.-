@@ -6,7 +6,7 @@ This tutorial provides the MATLAB codes, the Simulink models, and the necessary 
 1. A realistic column-like structure ([Example 1](./Example1.md))
 2. A scaled frame structure used in a physical experiment ([Example 2](./Example2.md))
 
-The first example demonstrates how to use MATLAB and Simulink to conduct reduced-order analysis for rocking problems. The second example illustrates the construction of a structural system with multiple interconnected components in Simulink.
+The first example demonstrates how to use MATLAB and Simulink to conduct reduced-order analysis for rocking problems. The second example provides a reference model for building a system with multiple interconnected components in Simulink.
 
 ---
 
