@@ -32,7 +32,7 @@ Readers must have a good understanding of:
 2. Simulink 2023a or later version.
 3. MATLAB **[Partial Differential Equation Toolbox](https://uk.mathworks.com/products/pde.html)**.
 4. Simulink extension **[Simscape Multibody](https://uk.mathworks.com/products/simscape-multibody.html)**.
-5. OxContact library in Simscape (⚠️Ask Manolis). 
+5. **[OxContact library](https://github.com/ec2608/OxContact)**  in Simscape.  
 ---
 
 
