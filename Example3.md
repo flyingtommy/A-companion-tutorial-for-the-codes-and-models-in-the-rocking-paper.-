@@ -6,10 +6,10 @@ This example also covers the detailed workflow, and the contents that are *not* 
 **Figure 1** shows the column geometry. The column and the support media properties can be found in the companion paper.
 
 <p align="center">
-<img src="images/Example1.JPG" width="500">
+<img src="images/VenusGeo.JPG" width="500">
 </p>
 
-*Figure 1: (a) Schematic drawing and (b) rigid corner feet position.*
+*Figure 1: (a) The Venus de Milo statue and (b) its corresponding full-order model.*
 
 
 ---
