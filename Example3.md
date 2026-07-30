@@ -21,10 +21,9 @@ This modified Craig-Bampton implementation allows you to retain any desired fixe
 ---
 
 
-## 🚩 Step 1: Perform Craig-Bampton Reduction in MATLAB 
-The following steps go through the [Example1_CBReduction code](Example1_Codes_and_Model/Example1_CBReduction.m) in details.
+## 🚩 Prepare needed parameters in MATLAB 
+The workflow of the following code is the same as that of the example1 so detailed explanation is omitted. If confused, refer to the stepwise explanations in example1. 
 
-### 1️⃣ Define structure parameters and common properties  
 ```matlab
 % Control code for the Simulink model: Venus
 % Author: Zheng-You Zhang
@@ -152,13 +151,9 @@ absTol = 1e-4;                                          % Solver absolute tolera
 ## 🚩 Step 2: Run Simulation in Simulink
 
 - After **Step 1**, **do not** clear anything in the MATLAB workspace.
-- Open the [Example_1_Simu.slx model](Example1_Codes_and_Model/Example_1_Simu.slx) in Simulink. Check the parameters in each block, and you should find they are defined already in the MATLAB workspace. For example, **Figure 4** shows the block of the reduced order flexible solid for modelling the column, and you should find the required fields of Origins, Stiffness Matrix, Mass Matrix, and Damping Matrix are defined in variables Reduced.P, Reduced.K, Reduced.M, and Reduced.C respectively.
+- Open the [Example_3_Simu.slx model](Example3_Codes_and_Model/Example_3_Simu.slx) in Simulink. Check the parameters in each block, and you should find they are defined already in the MATLAB workspace.
 
-<p align="center">
-<img src="images/ReducedBlock.JPG" width="500">
-</p>
 
-*Figure 4: The fields in the reduced order flexible block are defined after **Step 1**.*
 
 - Run the following code to perform simulation. 
 
