@@ -1,4 +1,4 @@
-## Example 1: Rocking Column with Corner Feet
+## Example 3: The rocking response of the Venus de Milo statue 
 
 The first example models a **solid marble column** with four rigid corner feet standing on a high-grip, stiff support medium. The height of the corner feet is negligible.
 This example also covers the detailed workflow, and the contents that are *not* covered by the **[Simscape Example](https://uk.mathworks.com/help/sm/ug/model-excavator-dipper-arm.html)** start with ⭐ in this document. 
