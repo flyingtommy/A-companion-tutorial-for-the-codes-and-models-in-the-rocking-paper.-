@@ -10,7 +10,7 @@ The third example models the **Venus de Milo** statue with a rigid pedestal glue
 
 *Figure 1: (a) The Venus de Milo statue and (b) its corresponding full-order model.*
 
-
+The code and 
 ---
 
 ## 🚩 Before all
@@ -21,10 +21,5 @@ This modified Craig-Bampton implementation allows you to retain any desired fixe
 ---
 
 
-
-
-filename4 = ['Column-Stress-26Modes-' num2str(freqRatio) '-' num2str(AmpRatio) '.mat']; 
-save(filename4,'time','StressZZ','NodePosition','RTrom');
-```
 
 
