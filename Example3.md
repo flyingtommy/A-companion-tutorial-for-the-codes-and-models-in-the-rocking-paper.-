@@ -11,6 +11,7 @@ The third example models the **Venus de Milo** statue with a rigid pedestal glue
 *Figure 1: (a) The Venus de Milo statue and (b) its corresponding full-order model.*
 
 The code and the Simulink model are in the [Example3_Codes_and Model](Example3_Codes_and_Model) folder. The workflow of the code and the model is the same as those of Example1, so no explanation is introduced. If confused, refer to Example1 for detailed stepwise explanation.
+
 ---
 
 ## 🚩 Before all
